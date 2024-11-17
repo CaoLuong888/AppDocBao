@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"
+    tools:context=".PhepTinhActivity"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:text="PHÉP TÍNH 2 SỐ"
+        android:gravity="center_horizontal"
+        ></TextView>
+    // phần nhập số A
+    <TableRow android:layout_margin="5dp">
+        <TextView
+            android:id="@+id/txtsoA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="1"
+            android:text="Nhập số A"
+            android:textAlignment="textEnd" />
+
+        <EditText
+            android:id="@+id/editSoA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+    </TableRow>
+    // phần nhập số B
+
+    <TableRow android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/txtsoB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="1"
+            android:text="Nhập số B"
+            android:textAlignment="textEnd" />
+
+        <EditText
+            android:id="@+id/editSoB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/btcong"
+            android:layout_margin="5dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="+"></Button>
+
+        <Button
+            android:id="@+id/bttru"
+            android:layout_margin="5dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="-"></Button>
+
+        <Button
+            android:id="@+id/btnhan"
+            android:layout_margin="5dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="*"></Button>
+
+        <Button
+            android:id="@+id/btchia"
+            android:layout_margin="5dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="/"></Button>
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="1"
+            android:text="Kết Quả"
+            android:textAlignment="textEnd" />
+
+        <EditText
+            android:id="@+id/editKQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+    </TableRow>
+
+    <TableRow android:gravity="center">
+
+        <Button
+            android:id="@+id/btthoat"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/holo_red_light"
+            android:text="Quay lại"
+            android:textColor="@color/white"></Button>
+    </TableRow>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:background="@android:color/holo_blue_light"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="CHUYỂN ĐỔI DỘ C --> ĐỘ F"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"></TextView>
+        <EditText
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/editND"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Nhập nhiệt độ"
+            android:inputType="numberDecimal" />
+
+        <RadioGroup
+            android:id="@+id/radioChon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonCtoF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="C  ->  F" />
+
+            <RadioButton
+                android:id="@+id/radioButtonFtoC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="F  ->  C" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtvKQ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Ket qua o day"
+            android:paddingTop="16dp"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <Button
+                android:background="@android:color/holo_blue_light"
+                android:textColor="@color/white"
+                android:id="@+id/btchuyen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Chuyển đổi" />
+
+            <Button
+                android:id="@+id/buttonClear"
+                android:background="@android:color/holo_blue_light"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Xóa Data" />
+
+            <Button
+                android:id="@+id/buttonExit"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"
+                android:background="@android:color/holo_red_light"
+                android:text="Quay lại"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+              />
+        </LinearLayout>
+    </LinearLayout>
+</TableLayout>
